@@ -68,5 +68,4 @@ clock
 
 
 
-
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
