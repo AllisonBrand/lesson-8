@@ -68,4 +68,22 @@ clock
 
 
 
+// Exercise: Plot the load of a residential building on load 2.
+
+// Residential building on load 2:
+object building
+{
+    parent load_2;
+    building_type CONDO;
+    object recorder // A recorder to track the load
+    {
+        file "building_2.csv";
+        property measured_real_power,measured_reactive_power;
+        interval 1h;
+    };
+}
+
+// Plot output data for building on load 2
+#on_exit 0 gridlabd plot -i=building_2.csv -o=building_2.png --plot:grid
+
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
