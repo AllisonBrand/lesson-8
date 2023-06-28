@@ -34,8 +34,14 @@ jobs:
         name: IEEE 123 voltage profile
         path: IEEE-123-voltage-profile.png
       
-    - name: Save building loadshape
+    - name: Save building 1 loadshape
       uses: actions/upload-artifact@v3
       with:
         name: Building 1 load
         path: building_1.png
+      
+    - name: Save building 2 loadshape
+      uses: actions/upload-artifact@v3
+      with:
+        name: Building 2 load
+        path: building_2.png
