@@ -75,6 +75,17 @@ object building
 {
     parent load_2;
     building_type CONDO;
+
+    // Add required DESIGN PARAMETERS (copy-pasted from lesson 7):
+    floor_area 1500 sf;
+    TH random.triangle(-20,-10) degC;
+    TC random.triangle(35,45) degC;
+    QE random.triangle(3,9) W/m^2;
+    QG random.triangle(0,2) W/m^2;
+    QO random.triangle(800,1600) W/unit;
+    QV random.triangle(200,600) W/unit;
+    SA random.triangle(10,20) m^2;
+
     object recorder // A recorder to track the load
     {
         file "building_2.csv";
